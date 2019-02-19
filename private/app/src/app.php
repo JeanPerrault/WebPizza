@@ -21,6 +21,6 @@ require_once "../private/app/src/db_connect.php";
  */
 require_once "../private/app/src/routing.php";
 /**
- * 6. compilation de l application
+ * 6. compilation de la page
  */
 require_once "../private/app/src/compile.php";
