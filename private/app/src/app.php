@@ -1,16 +1,26 @@
 <?php
 
+/**
+ * 1. integration de la configuration
+ */
 require_once "../private/app/config/config.php";
+/**
+ * 2. definition de l'environnement
+ */
 require_once "../private/app/src/environnement.php";
+/**
+ * 3. comportement des erreurs
+ */
 require_once "../private/app/src/err_reporting.php";
+/**
+ * 4. connection aux bases de donnees
+ */
 require_once "../private/app/src/db_connect.php";
+/**
+ * 5. routage de l application
+ */
 require_once "../private/app/src/routing.php";
+/**
+ * 6. compilation de l application
+ */
 require_once "../private/app/src/compile.php";
-
-
-// require_once "./app/config/config.php";
-// require_once "./src/environnement.php";
-// require_once "./src/err_reporting.php";
-// require_once "./src/db_connect.php";
-// require_once "./src/routing.php";
-// require_once "./src/compile.php";
