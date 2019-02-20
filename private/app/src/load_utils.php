@@ -11,6 +11,7 @@ if(!defined('UTILS_PATH')){
 
 if(UTILS_PATH != null){
     // Scanner le repertoire UTILS_PATH
+    // scandir renvoie toujours un tableau
     $utils_scan = scandir(UTILS_PATH);
     var_dump($utils_scan);
     // une boucle sur la liste des entrees $utils_scan
