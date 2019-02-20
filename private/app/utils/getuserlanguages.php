@@ -18,6 +18,7 @@ if (!function_exists('getUserLanguages'))
         {
             $lang = explode(";", $lang);
             $lang = $lang[0];
+            // dump ($lang);
 
             $languages_arr[$key] = $lang;
         }
