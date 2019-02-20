@@ -21,6 +21,11 @@ require_once "../private/app/src/db_connect.php";
  */
 require_once "../private/app/src/routing.php";
 /**
- * 6. compilation de la page
+ * 6. inclusion des fonctions 'Utils"
+ */
+require_once "../private/app/src/load_utils.php";
+  
+/**
+ * 7. compilation de la page
  */
 require_once "../private/app/src/compile.php";
