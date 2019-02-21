@@ -1,30 +1,45 @@
 <?php
-
 /**
- * fichier de definition des routes de l application
+ * Fichier de définition des routes de l'applications
  * 
- * - chaque ligne du tableau $routes definit une route
- * - chaque route est definie par
- *      - le nom de la route
- *      - le "path"
- *      - le "controller", la fonction declenchée par la route
- *      - la/les methode(s)
+ * - Chaque ligne du tableau $routes défini une route
+ * - Chaque route est défini par
+ *      - Le nom de la route
+ *      - Le "path"
+ *      - Le "controller", la focntion déclenché par la route
+ *      - La|Les méthode(s)
  */
 
 $routes = [
-    //route index (page d'acceuil du site)
-    // homepage:index veut dire que dans le fichier "homepage.php", il y a une fonction "homepage_index"
-    ["homepage", "/", "homepage:index", ["HEAD","GET"]], 
-    // page de contact
-    ["contact", "/contact", "contact:index",["HEAD","GET"]],
 
+    // Route Index (page d'accueil du site)
+    ["homepage", "/", "homepage:index", ["HEAD","GET"]],
+
+    // Liste des produits
+    ["pizzas", "/pizzas", "products:pizzas", ["HEAD","GET"]],
+    ["salads", "/salades", "products:salads", ["HEAD","GET"]],
+    ["desserts", "/desserts", "products:desserts", ["HEAD","GET"]],
+    ["drinks", "/boissons", "products:drinks", ["HEAD","GET"]],
+    ["menus", "/menus", "products:menus", ["HEAD","GET"]],
+
+    // Page de contact
+    ["contact", "/contact", "contact:index", ["HEAD","GET","POST"]],
+
+    // Pages de sécurité
+    ["login", "/login", "security:login", ["HEAD","GET","POST"]],
+    ["register", "/register", "security:register", ["HEAD","GET","POST"]],
+    ["forgotten_password", "/forgotten-password", "security:forgotten_password", ["HEAD","GET","POST"]],
+
+    // Page de commande
+    ["order", "/order", "order:index", ["HEAD","GET"]],
+
+    // Profil utilisateur
+    ["account", "/mon-compte", "account", ["HEAD","GET"]],
 
     // ---
 
-
-    // Erreur 404
+    // Erreur 404 
     // /!\ TOUJOURS EN DERNIER DU TABLEAU ROUTE
-    ["error-404", "/404", "error:404", ["HEAD","GET"]]
-
+    ["error-404", "/404", "errors:404", ["HEAD","GET"]]
 
 ];
