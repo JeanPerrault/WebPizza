@@ -47,7 +47,7 @@ foreach($routes as $route){
 // echo "<h3>Apres la boucle</h3>";
 // var_dump($route);
 // echo "<br>";
-var_dump($route);
+
 // a ce niveau soit la variable $route est renseignée grace à un uri trouvé
 // dans le tableau $route, soit elle a pris la valeur de la derniere iteration
 // du tableau $route, C.A.D. la route 404

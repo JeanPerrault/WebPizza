@@ -14,7 +14,7 @@ $routes = [
 
     // Route Index (page d'accueil du site)
     ["homepage", "/", "homepage:index", ["HEAD","GET"]],
-
+    
     // Liste des produits
     ["pizzas", "/pizzas", "products:pizzas", ["HEAD","GET"]],
     ["salads", "/salades", "products:salads", ["HEAD","GET"]],
