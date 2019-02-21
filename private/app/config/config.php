@@ -51,3 +51,18 @@ $db = [];
 // inclusion de la config de la BDD
 require_once "database.php";
 
+/**
+ *  4. definition des variables de routage
+ */
+
+ // definition de l'uri par defaut
+ $uri ="/";
+
+ // definition de la table de routage par defaut
+ $routes = [];
+
+ // contient les infos de la route courante
+ $route = [];
+
+ // inclusion de la config du routage
+ require_once "routes.php";

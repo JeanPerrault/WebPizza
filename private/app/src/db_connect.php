@@ -41,9 +41,9 @@ foreach($db_config as $name => $params){
 
     // echo $db_dsn;
 }
-
-$str = "SELECT * FROM ingredients";
-$q = $db['main']->query($str);
-$r = $q->fetchALL();
-var_dump($r);
+// // pour tester 
+// $str = "SELECT * FROM ingredients";
+// $q = $db['main']->query($str);
+// $r = $q->fetchALL();
+// var_dump($r);
 
