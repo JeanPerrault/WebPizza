@@ -51,7 +51,7 @@ if ($controller_methode !== null && !empty($controller_methode)){
 // echo "<br>";
 // var_dump($controller_path);
 // echo "<br>";
-// var_dump($controller_methode);
+//  var_dump($controller_methode);
 
 /**
  * integration du fichier controleur

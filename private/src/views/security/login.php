@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Page security de WebPizza</h1>
+    <h1>Page security login de WebPizza</h1>
 </body>
 </html>

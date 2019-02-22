@@ -7,7 +7,7 @@
   * index
   */
 
-  function errors_index(){
+  function errors_404(){
       // integration de la vue
-      include_once "../private/src/views/errors/index.php";
+      include_once "../private/src/views/errors/404.php";
   }

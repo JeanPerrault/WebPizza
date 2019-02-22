@@ -8,5 +8,6 @@
   */
 
   function contact_index(){
-      echo "page de contact WebPizza";
-  }
+    // integration de la vue
+    include_once "../private/src/views/contact/index.php";
+}

@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Page errors de WebPizza</h1>
+    <h1>Page products pizzas de WebPizza</h1>
 </body>
 </html>
