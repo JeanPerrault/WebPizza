@@ -37,6 +37,8 @@ $dev_domains = [
     "webpizza.local"
 ];
 
+
+
 /**
  * 3. definition des variables de BDD
  */
@@ -66,3 +68,13 @@ require_once "database.php";
 
  // inclusion de la config du routage
  require_once "routes.php";
+
+
+ /**
+  * definition des expressions regulieres
+  */
+  $re = [
+    "firstname"=> '/^[a-z-]+$/i',
+    "lastname"=> '/^[a-z-]+$/i',
+    "email"=> '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+  ];
