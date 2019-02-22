@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Page products salads de WebPizza</h1>
-</body>
-</html>
+<?php include_once "../private/src/views/layout/header.php"; ?>
+Liste des salades
+<?php include_once "../private/src/views/layout/footer.php"; ?>
