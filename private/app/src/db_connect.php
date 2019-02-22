@@ -1,7 +1,21 @@
 <?php
-
-
-
+/**
+ * Fichier de connexions aux base de sonnées
+ * - http://php.net/manual/fr/class.pdo.php
+ * 
+ * 
+ * Instance PDO - Exemple 1
+ * Passage de paramètres au constructeur :
+ * ---
+ * $pdo = new PDO('mysql:host=localhost;dbname=DBNAME', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
+ * 
+ * 
+ * Instance PDO - Exemple 2
+ * construction de objet, puis passage de paramètres à PDO::setAttribute() :
+ * ---
+ * $pdo = new PDO('mysql:host=localhost;dbname=DBNAME', 'root', '');
+ * $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+ */
 
 // dans le cas ou la variable $db_config n est pas defini (dans le fichier config.php)
 // on initialise la variable $db_config avec un tableau vide
