@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -56,7 +56,7 @@
                             <a class="nav-link" href="/mon-compte">Mon Compte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cart" href="/cart">Panier</a>
+                            <a class="nav-link cart" href="/panier">Panier</a>
                         </li>
                     </ul>
                 </div>
