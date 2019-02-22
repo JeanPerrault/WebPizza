@@ -32,7 +32,7 @@ foreach($routes as $route){
         // on ajoute le nom de la route courante dans la variable $GLOBALS de PHP
         // pour l utiliser par la suite
         $GLOBALS['route_active'] = $route[0];
-
+      
         // echo "<h3>Dans la boucle</h3>";
         // var_dump($route[1]);
         // echo "<br>";
