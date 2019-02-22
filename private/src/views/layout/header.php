@@ -69,5 +69,5 @@
     <!-- Main Content -->
     <div id="main-content">
 
-    <?php var_dump($GLOBALS['route_active']); ?>
+    
     
