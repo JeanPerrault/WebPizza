@@ -27,6 +27,7 @@ if (!empty($_SERVER['REQUEST_URI'])){
 // recherche de l uri dans le tableau de routage
 foreach($routes as $route){
     // le parametre "path" doit correspondre à $uri
+    // if ("/webpizza/public".$route[1] == $uri){
     if ($route[1] == $uri){
 
         // on ajoute le nom de la route courante dans la variable $GLOBALS de PHP

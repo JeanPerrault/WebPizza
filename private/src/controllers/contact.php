@@ -55,8 +55,12 @@
             $query-> bindValue(':email', $email, PDO::PARAM_STR);
             $query-> bindValue(':message', $message, PDO::PARAM_STR);
             $query-> bindValue(':sendingtimestamp', time(), PDO::PARAM_INT);
-            $query->execute();
-            // $r_query = $query->fetchALL();
+            $results = $query->execute(); // $results = true si ok sinon false
+            if($results){
+                            
+            }else{
+
+            }
 
           // TODO: Definition d'un message de "callback / flashbag" (success ou error)
           // TODO: redirection de l utilisateur vers la page precedente
@@ -69,11 +73,11 @@
           //echo "Erreur sur le formulaire";
         }
 
-        dump($_POST);
-        dump($firstname);
-        dump($lastname);
-        dump($email);
-        dump($message);
+        // dump($_POST);
+        // dump($firstname);
+        // dump($lastname);
+        // dump($email);
+        // dump($message);
 
     }else {
           
