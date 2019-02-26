@@ -78,3 +78,8 @@ require_once "database.php";
     "lastname"=> '/^[a-z-]+$/i',
     "email"=> '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
   ];
+
+  // Les données de l'utilisateur identifié, seront stockées dans l'index
+// $_SESSION['user']
+
+

@@ -7,7 +7,13 @@
   * index
   */
 
-  function account_index(){
-    // integration de la vue
-    include_once "../private/src/views/account/index.php";
+
+
+function account_index(){
+  // verifie si l utilisateur n est pas identifié
+  // integration de la vue
+  if (!isset($_SESSION['user']) || empty($_SESSION['user'])){
+      redirect("/connexion");
+  }
 }
+
