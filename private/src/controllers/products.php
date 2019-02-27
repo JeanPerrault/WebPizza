@@ -67,3 +67,28 @@ function products_menus()
     // Intégration de la vue
     include_once "../private/src/views/products/menus.php";
 }
+
+// products CRUD
+function products_create() 
+{
+    // Code 
+    // ...
+    // Intégration de la vue
+    include_once "../private/src/views/products/crud/create.php";
+}
+
+function products_update() 
+{
+    // Code 
+    // ...
+    // Intégration de la vue
+    include_once "../private/src/views/products/crud/update.php";
+}
+function products_delete() 
+{
+    // Code 
+    // ...
+    // Intégration de la vue
+    include_once "../private/src/views/products/crud/delete.php";
+}
+
