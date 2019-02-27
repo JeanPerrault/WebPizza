@@ -1,59 +1,49 @@
 <?php
-
 /**
- * fichier de routage de l application
+ * Fichier de routage de l'application
  * 
- *  
- *      - le nom de la route
- *      - le "path"
- *      - le "controller", la fonction declenchée par la route
- *      - la/les methode(s)
+ * RAPPEL du format d'une route dans le tableau $route
+ *  - Le nom de la route
+ *  - Le "path"
+ *  - Le "controller", la focntion déclenché par la route
+ *  - La|Les méthode(s)
  */
 
-// dans le cas ou la variable $routes n est pas definie (dans le fichier routes.php)
-if (!isset($routes)){
-   $routes = [];
+// Dans le cas ou la variable $routes n'est pas défini (dans le fichier routes.php)
+// On initalise la variable $routes avec un tableau vide
+if (!isset($routes)) {
+    $routes = [];
 }
 
- // recuperation de l uri courant
-if (!empty($_SERVER['REQUEST_URI'])){
+// Récupération de l'uri courant
+if (!empty($_SERVER['REQUEST_URI'])) 
+{
     $uri = $_SERVER['REQUEST_URI'];
 }
 
-// echo "<h3>Avant la boucle</h3>";
-// var_dump($route);
-// echo "<br>";
 
-// recherche de l uri dans le tableau de routage
-foreach($routes as $route){
-    // le parametre "path" doit correspondre à $uri
-    // if ("/webpizza/public".$route[1] == $uri){
-    if ($route[1] == $uri){
-
-        // on ajoute le nom de la route courante dans la variable $GLOBALS de PHP
-        // pour l utiliser par la suite
+// Recherche de l'URI dans le tableau de routage
+foreach ($routes as $route) 
+{
+    // le paramètre "path" doit correspondre à l'$uri
+    if ($route[1] == $uri) 
+    {
+        // On ajoute le nom de la route courante dans la variable $GLOBALS de PHP
+        // Pour l'utiliser par la suite.
         $GLOBALS['route_active'] = $route[0];
-      
-        // echo "<h3>Dans la boucle</h3>";
-        // var_dump($route[1]);
-        // echo "<br>";
 
-        // si la route est trouvée dans la table de routage on sort de la boucle
-        // grace au mot cle "break"
-        // la variable $route contient les infos de la derniere iteration de la boucle
+        // Si la route est trouvé dans la table de routage on sort de la boucle
+        // grace au mot clé "break;"
+        // La variable $route contient les infos de la dernière itération de la boucle
         break;
     }
-    
 }
-// echo "<h3>Apres la boucle</h3>";
-// var_dump($route);
-// echo "<br>";
 
-// a ce niveau soit la variable $route est renseignée grace à un uri trouvé
-// dans le tableau $route, soit elle a pris la valeur de la derniere iteration
+// A ce niveau soit la variable $route est renseignée grace à un URI trouvé 
+// dans le tableau $route, soit elle à pris la valeur de la dernière itération
 // du tableau $route, C.A.D. la route 404
 // var_dump($route);
 
-if (!isset($GLOBALS['route_active'])){
+if (!isset($GLOBALS['route_active'])) {
     $GLOBALS['route_active'] = "error-404";
 }

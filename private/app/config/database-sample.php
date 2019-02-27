@@ -13,7 +13,7 @@ $db_config = [
         "user" => "",       // Nom d'utilisateur de la BDD
         "pass" => "",       // Mot de passe de l'utilisateur
         "schema" => "",     // Nom de la base de données
-        "charset" => ""     // police utilisée
+        "charset" => "utf8" // Jeu de caractère de la base de donnée
     ]
 
 ];

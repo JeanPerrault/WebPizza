@@ -1,4 +1,5 @@
-<section id="contact">
+
+    <section id="contact">
         <div class="container">
             <form name="contact" action="/contact" class="row" method="post" novalidate>
 
@@ -36,4 +37,4 @@
 
             </form>
         </div>
-</section>
+    </section>

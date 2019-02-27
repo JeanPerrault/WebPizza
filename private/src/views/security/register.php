@@ -1,47 +1,43 @@
 <?php include_once "../private/src/views/layout/header.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-    
-    <form method="post" class="container" novalidate>
-        <div class="row">
-            <div class="col-4 offset-4">
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-4">
+        
+            <h2>Inscription</h2>
+
+            <form class="security-form" method="post">
             
                 <!-- Champ Prénom -->
                 <div class="form-group">
-                    <input class="form-control" type="text" name="firstname" placeholder="Votre Prénom" value="<?= $firstname ?>">
+                    <input class="form-control" type="text" name="firstname" placeholder="Votre prénom" value="<?= $firstname ?>">
                 </div>
-
-                <!-- Champ NOM -->
+                
+                <!-- Champ Nom -->
                 <div class="form-group">
-                    <input class="form-control" type="text" name="lastname" placeholder="Votre Nom" value="<?= $lastname ?>">
+                    <input class="form-control" type="text" name="lastname" placeholder="Votre nom" value="<?= $lastname ?>">
                 </div>
-
-                <!-- Champ Email -->
+                
+                <!-- Champ email -->
                 <div class="form-group">
                     <input class="form-control" type="email" name="email" placeholder="Votre adresse email" value="<?= $email ?>">
                 </div>
-
+                
                 <!-- Champ Mot de passe -->
                 <div class="form-group">
                     <input class="form-control" type="password" name="password" placeholder="Votre nouveau mot de passe">
                 </div>
 
                 <button class="btn btn-success btn-block">Valider</button>
+            
+            </form>
 
-                <a href="/connexion">J'ai deja un compte</a>
-
+            <div class="form-link">
+                <a href="/connexion">J'ai déja un compte</a>
             </div>
+        
         </div>
-    </form>
+    </div>
+</div>
 
-</body>
-</html>
 <?php include_once "../private/src/views/layout/footer.php"; ?>

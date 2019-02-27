@@ -1,9 +1,4 @@
 <?php
-/**
- * fonction qui gere une chaine de caractere aleatoire
- *
- * @return void
- */
 
 if (!function_exists('randstr')) {
     function randstr($length=10, $upper=false, $number=false) 
@@ -14,14 +9,16 @@ if (!function_exists('randstr')) {
 
         if ($upper) {
             $characters.= $characters_upper;
-            var_dump($characters);
+            // 
         }
 
         if ($number) {
             $characters .= $characters_number;
-            var_dump($characters);
+            // 
         }
-                
+
+        // 
+        
         $charactersLength = strlen($characters);
         $randomString = '';
         for ($i = 0; $i < $length; $i++) {
@@ -30,15 +27,3 @@ if (!function_exists('randstr')) {
         return $randomString;
     }
 }
-
-// if (!function_exists('randstr')){
-//     function randstr($length = 10){
-//         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//         $charactersLength = strlen($characters);
-//         $randomString = '';
-//         for ($i = 0; $i < $length; $i++) {
-//             $randomString .= $characters[rand(0, $charactersLength - 1)];
-//         }
-//         return $randomString;
-//     }
-// }

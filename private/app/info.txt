@@ -1,1 +1,1 @@
-Le repertoire APP stocke les scripts communs à toutes les applications
+Le répertoire APP stock les scripts commun à toutes les applications

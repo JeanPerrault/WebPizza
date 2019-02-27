@@ -14,7 +14,7 @@ $routes = [
 
     // Route Index (page d'accueil du site)
     ["homepage", "/", "homepage:index", ["HEAD","GET"]],
-    
+
     // Liste des produits
     ["pizzas", "/pizzas", "products:pizzas", ["HEAD","GET"]],
     ["salads", "/salades", "products:salads", ["HEAD","GET"]],
@@ -22,13 +22,14 @@ $routes = [
     ["drinks", "/boissons", "products:drinks", ["HEAD","GET"]],
     ["menus", "/menus", "products:menus", ["HEAD","GET"]],
 
-    // Page de traitement du formulaire contact
+    // Page de traitement du formulaire de contact
     ["contact", "/contact", "contact:index", ["HEAD","POST"]],
 
     // Pages de sécurité
     ["login", "/connexion", "security:login", ["HEAD","GET","POST"]],
     ["register", "/inscription", "security:register", ["HEAD","GET","POST"]],
     ["forgotten_password", "/mot-de-passe-oublie", "security:forgotten_password", ["HEAD","GET","POST"]],
+    ["logout", "/deconnexion", "security:logout", ["HEAD","GET"]],
 
     // Page de commande
     ["order", "/panier", "order:index", ["HEAD","GET"]],

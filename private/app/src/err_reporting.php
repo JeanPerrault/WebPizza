@@ -1,30 +1,29 @@
 <?php
-
 /**
- * fichier de definition du comportement des erreurs PHP
+ * Fichier de définition du comportement des erreurs PHP
  * 
- * info
+ * Info
  * - http://php.net/manual/fr/function.error-reporting.php
- * 
  */
 
-// dans le cas ou la variable $env n est pas definie
-// on initialise la variable $env avec la valeur PROD
-if (!isset($env)){ 
+// Dans le cas ou la variable $env n'est pas défini
+// On initalise la variable $env avec la valeur "prod"
+if (!isset($env)) {
     $env = "prod";
 }
 
-// dans le cas ou la variable $env est definie a une autre valeur que "dev"
-// on demande a PHP d ignorer toutes les erreurs.
-if($env != "dev"){
-    ini_set('display_errors',0);
-    ini_set('display_starup_errors',0);
+// Dans le cas ou la variable $env est défini à une autre valeur que "dev"
+// On demande à PHP d'ignorer toutes les erreurs.
+if ($env != "dev") {
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
     error_reporting(0);
+}
 
-// dans le cas ou la variable $env est definie a la valeur "dev"
-// on demande a PHP d afficher toutes les erreurs.
-} else{
-    ini_set('display_errors',1);
-    ini_set('display_starup_errors',1);
+// Dans le cas ou la variable $env est défini à la valeur "dev"
+// On demand e à PHP d'afficher toutes les erreurs
+else {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 }

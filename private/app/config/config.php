@@ -1,85 +1,76 @@
 <?php
-
 /**
- *  Fichier de configuration générale de l'application
+ * Fichier de configuration general de l'application
  * 
  * 1. Définition des constantes
- * 2. definition des variables d'environnement d'éxécution
- * 3. 
- * 4. 
- * 
+ * 2. Définition des variables d'environnement d'exécution
+ * 3.
  */
-
 
 /**
  * 1. Définition des constantes
  */
 
- // definir le chemin du repertoire "utils"
-define('UTILS_PATH',"../private/app/utils/");
+// Definir le chemin du répertoire "utils"
+define('UTILS_PATH', "../private/app/utils/");
 
-// WEBSITE_TITLE : definition du titre du site
+// WEBSITE_TITLE : Definition du titre du site
 define('WEBSITE_TITLE', "WebPizza !");
 
+
 /**
- * 2. definition des variables d'environnement d'éxécution
+ * 2. Définition des variables d'environnement d'exécution
  */
 
-// Environnement de developpement ou production ?
-// les valeurs peuvent etre : "prod" ou "dev"
-// par defaut, on considere que l application s'execute en environnement de PROD
+// Environnement de développement ou production ?
+// les valeur peuvent être : "prod" ou "dev"
+// Par défaut, on considère que l'application s'exécute en environnement de PROD
 $env = "prod";
 
-// liste des domaines que l on considere comme etant des environnements de developpement
+// Liste des domaines que l'on considères comme étant des environnements de développement
 $dev_domains = [
     "127.0.0.1",
     "localhost",
     "webpizza.local"
 ];
 
-
-
 /**
- * 3. definition des variables de BDD
+ * 3. Définition des variables de base de données
  */
 
-// liste des configurations de connexions aux bases de donnees par defaut
-$db_config = []; // tableau qui va contenir toutes les infos de connexion a la BDD
+// Liste des configurations de connections aux bases de données par défaut
+$db_config = [];
 
-// liste des connexions aux BDD
-// cette liste sera nourrie par le fichier db_connect.php
+// Liste des connections aux bases de données
+// Cette liste sera nourris par le fichier db_connect.php
 $db = [];
 
-// inclusion de la config de la BDD
+// Inclusion de la config de la base de données
 require_once "database.php";
 
 /**
- *  4. definition des variables de routage
+ * 4. Définition des variables de routage
  */
 
- // definition de l'uri par defaut
- $uri ="/";
+// Définition de l'uri par défaut
+$uri = "/";
 
- // definition de la table de routage par defaut
- $routes = [];
+// Définition de la table de routage par défaut
+$routes = [];
 
- // contient les infos de la route courante
- $route = [];
+// Contient les information de la route courante
+$route = [];
 
- // inclusion de la config du routage
- require_once "routes.php";
-
-
- /**
-  * definition des expressions regulieres
-  */
-  $re = [
-    "firstname"=> '/^[a-z-]+$/i',
-    "lastname"=> '/^[a-z-]+$/i',
-    "email"=> '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-  ];
-
-  // Les données de l'utilisateur identifié, seront stockées dans l'index
-// $_SESSION['user']
+// Inclusion de la config du routage
+require_once "routes.php";
 
 
+/**
+ * Definition des exepressions régulières
+ */
+
+$re = [
+    "firstname" => '/^[a-z-]+$/i',
+    "lastname" => '/^[a-z-]+$/i',
+    "email" => '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+];

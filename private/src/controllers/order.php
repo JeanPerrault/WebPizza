@@ -1,13 +1,16 @@
 <?php
 /**
- * fichier qui gere la page d'order
+ * Fichier qui gère la page du panier client
  */
 
- /**
-  * index
-  */
-
-  function order_index(){
-      // integration de la vue
-      include_once "../private/src/views/order/index.php";
-  }
+/**
+ * index
+ */
+function order_index() 
+{
+    // Code 
+    // ...
+    
+    // Intégration de la vue
+    include_once "../private/src/views/order/index.php";
+}

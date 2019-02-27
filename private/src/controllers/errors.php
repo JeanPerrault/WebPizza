@@ -1,13 +1,16 @@
 <?php
 /**
- * fichier qui gere la page d'erreurs'
+ * Fichier qui gère les pages d'erreurs
  */
 
- /**
-  * index
-  */
-
-  function errors_404(){
-      // integration de la vue
-      include_once "../private/src/views/errors/404.php";
-  }
+/**
+ * 404
+ */
+function errors_404() 
+{
+    // Code 
+    // ...
+    
+    // Intégration de la vue
+    include_once "../private/src/views/errors/404.php";
+}
