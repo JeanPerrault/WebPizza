@@ -36,8 +36,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ml-auto">
                         <li class="nav-item">
-                            <!-- <a class="nav-link <?= ($GLOBALS['route_active'] == "pizzas" ? "active" : null) ?>" href="/pizzas">Pizzas</a> -->
-                            <a class="nav-link <?= ($GLOBALS['route_active'] == "pizzas" ? "active" : null) ?>" href="<?= url('pizzas') ?>">Pizzas</a>
+                            <a class="nav-link <?= ($GLOBALS['route_active'] == "pizzas" ? "active" : null) ?>" href="/pizzas">Pizzas</a>
+                            <!-- <a class="nav-link <?= ($GLOBALS['route_active'] == "pizzas" ? "active" : null) ?>" href="<?= url('pizzas') ?>">Pizzas</a> -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?= ($GLOBALS['route_active'] == "salads" ? "active" : null) ?>" href="/salades">Salades</a>

@@ -22,9 +22,10 @@ $routes = [
     ["drinks", "/boissons", "products:drinks", ["HEAD","GET"]],
     ["menus", "/menus", "products:menus", ["HEAD","GET"]],
 
-    ["product_create", "/admin/product/create", "product:create",["HEAD","GET","POST"]],
-    ["product_update", "/admin/product/update", "product:update",["HEAD","GET","POST"]],
-    ["product_delete", "/admin/product/delete", "product:delete",["HEAD","GET","POST"]],
+    ["product_create", "/admin/product/create", "products:create", ["HEAD","GET","POST"]],
+    ["product_update", "/admin/product/update", "products:update", ["HEAD","GET","POST"]],
+    ["product_delete", "/admin/product/delete", "products:delete", ["HEAD","GET","POST"]],
+    // "/admin/product/update?id=X"
 
     // Page de traitement du formulaire de contact
     ["contact", "/contact", "contact:index", ["HEAD","POST"]],

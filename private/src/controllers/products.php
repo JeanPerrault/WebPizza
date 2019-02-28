@@ -68,27 +68,52 @@ function products_menus()
     include_once "../private/src/views/products/menus.php";
 }
 
-// products CRUD
+
+// PRODUCTS CRUD
+
+/**
+ * Création d'un produit
+ */
 function products_create() 
 {
-    // Code 
-    // ...
-    // Intégration de la vue
+    global $db;
+    
+    // Données du fomulaire par défaut
+    $name = null;
+    $description = null;
+    $illustration = null;
+    $price = null;
+
+    // Traitement du formulaire
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+    {
+        $isValid = true;
+
+        // Recup des données du formulaire
+        $name           = isset($_POST['name']) ? trim($_POST['name']) : null;
+        $description    = isset($_POST['description']) ? trim($_POST['description']) : null;
+        $illustration   = isset($_POST['illustration']) ? trim($_POST['illustration']) : null;
+        $price          = isset($_POST['price']) ? trim($_POST['price']) : null;
+
+        // print_r( $_POST );
+    }
+
+    // Affichage du Formulaire
     include_once "../private/src/views/products/crud/create.php";
 }
 
+/**
+ * MAJ d'un produit
+ */
 function products_update() 
 {
-    // Code 
-    // ...
-    // Intégration de la vue
-    include_once "../private/src/views/products/crud/update.php";
-}
-function products_delete() 
-{
-    // Code 
-    // ...
-    // Intégration de la vue
-    include_once "../private/src/views/products/crud/delete.php";
+    echo "MAJ #".$_GET['id'];
 }
 
+/**
+ * Suppression d'un produit
+ */
+function products_delete() 
+{
+    // 
+}
